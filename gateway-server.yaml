@@ -29,4 +29,4 @@ spring:
 
 logging:
   level:
-    root: ${LOG_LEVEL:DEBUG}
+    root: ${LOG_LEVEL:INFO}
