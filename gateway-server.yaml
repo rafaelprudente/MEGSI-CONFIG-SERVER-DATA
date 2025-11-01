@@ -3,25 +3,25 @@ spring:
     banner-mode: off
   cloud:
     gateway:
-      globalcors:
-        add-to-simple-url-handler-mapping: true
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "*"
-            allowedHeaders: "*"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - PATCH
-              - DELETE
-              - HEAD
-              - OPTIONS
-      discovery:
-        locator:
-          enabled: true
       server:
         webflux:
+          globalcors:
+            add-to-simple-url-handler-mapping: true
+            corsConfigurations:
+              '[/**]':
+                allowedOrigins: "*"
+                allowedHeaders: "*"
+                allowedMethods:
+                  - GET
+                  - POST
+                  - PUT
+                  - PATCH
+                  - DELETE
+                  - HEAD
+                  - OPTIONS
+          discovery:
+            locator:
+              enabled: true
           routes:
             - id: ti-service-auth
               uri: lb://ITI-SERVICE-AUTH
