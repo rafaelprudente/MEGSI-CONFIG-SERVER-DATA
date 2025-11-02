@@ -1,3 +1,5 @@
+server:
+  port: 5080
 spring:
   main:
     banner-mode: off
