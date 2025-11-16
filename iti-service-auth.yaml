@@ -37,9 +37,6 @@ springdoc:
       maintenance:
         name: Rafael Santos
         email: rafael.prudente.santos@gmail.com
-#    external-doc:
-#      description: Azure Code Repository
-#  show-login-endpoint: true
   description: ""
 
 management:
@@ -51,7 +48,10 @@ management:
     health:
       show-details: always
 
-## Security (custom property)
+logging:
+  level:
+    root: ${LOG_LEVEL:INFO}
+
 request:
   matchers:
     to:
@@ -61,6 +61,3 @@ jwt:
   secret: thisIsMysecregtfrdesww233eggtffeeddgkjjhhtdhttebd54ndhdhfhhhshs8877465sbbdd
   expiration: 3600000
 
-logging:
-  level:
-    root: ${LOG_LEVEL:INFO}
