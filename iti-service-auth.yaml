@@ -37,9 +37,9 @@ springdoc:
       maintenance:
         name: Rafael Santos
         email: rafael.prudente.santos@gmail.com
-    external-doc:
-      description: Azure Code Repository
-  show-login-endpoint: true
+#    external-doc:
+#      description: Azure Code Repository
+#  show-login-endpoint: true
   description: ""
 
 management:
