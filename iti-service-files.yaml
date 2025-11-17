@@ -51,6 +51,7 @@ management:
 logging:
   level:
     root: ${LOG_LEVEL:INFO}
+    pt: DEBUG
 
 request:
   matchers:
