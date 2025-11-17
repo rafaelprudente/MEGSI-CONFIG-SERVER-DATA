@@ -1,0 +1,62 @@
+spring:
+  main:
+    banner-mode: off
+
+  sql:
+    init:
+      mode: always
+
+  datasource:
+    url: jdbc:mariadb://${MARIADB_SERVER_URI}:3306/ITI
+    username: root
+    password: uminho
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: validate
+      dialect: org.hibernate.dialect.MariaDBDialect
+    defer-datasource-initialization: false
+    open-in-view: false
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /${spring.application.name}/swagger/v3/api-docs
+  packages-to-scan: pt.iti
+  show-actuator: true
+  swagger-ui:
+    path: /${spring.application.name}/swagger/swagger-ui.html
+    enabled: true
+    operationsSorter: method
+    tryItOutEnabled: true
+    filter: true
+    tagsSorter: alpha
+    developer:
+      maintenance:
+        name: Rafael Santos
+        email: rafael.prudente.santos@gmail.com
+  description: ""
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    root: ${LOG_LEVEL:INFO}
+
+request:
+  matchers:
+    to:
+      allow: /actuator/**,/${spring.application.name}/swagger/**,/api/v1/auth/token/**
+
+jwt:
+  secret: thisIsMysecregtfrdesww233eggtffeeddgkjjhhtdhttebd54ndhdhfhhhshs8877465sbbdd
+  expiration: 3600000
