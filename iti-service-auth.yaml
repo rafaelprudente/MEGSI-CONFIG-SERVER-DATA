@@ -15,9 +15,9 @@ spring:
   jpa:
     show-sql: false
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
       dialect: org.hibernate.dialect.MariaDBDialect
-    defer-datasource-initialization: true
+    defer-datasource-initialization: false
     open-in-view: false
 
 springdoc:
