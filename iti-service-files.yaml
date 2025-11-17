@@ -56,7 +56,7 @@ logging:
 request:
   matchers:
     to:
-      allow: /actuator/**,/${spring.application.name}/swagger/**,/api/v1/auth/token/**
+      allow: /actuator/**,/${spring.application.name}/swagger/**
 
 jwt:
   secret: thisIsMysecregtfrdesww233eggtffeeddgkjjhhtdhttebd54ndhdhfhhhshs8877465sbbdd
