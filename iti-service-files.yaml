@@ -64,3 +64,4 @@ jwt:
 
 app:
   root_folder: /SHARED/UMDRIVE
+  allowed_MimeTypes: '.txt,.pdf'
