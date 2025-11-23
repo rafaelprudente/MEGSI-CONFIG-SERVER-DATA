@@ -63,5 +63,5 @@ jwt:
   expiration: 3600000
 
 app:
-  root_folder: /SHARED/UMDRIVE
+  root_folder: /NAS
   allowed_MimeTypes: '.txt,.pdf'
