@@ -50,8 +50,8 @@ management:
 
 logging:
   level:
-    root: ${LOG_LEVEL:INFO}
-    pt: DEBUG
+    root: INFO
+    pt: ${LOG_LEVEL:INFO}
 
 request:
   matchers:
