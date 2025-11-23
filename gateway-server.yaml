@@ -34,7 +34,7 @@ spring:
             - id: iti-service-files
               uri: lb://ITI-SERVICE-FILES
               predicates:
-                - Path=/api/v1/files,
+                - Path=/api/v1/files/**,
                   /iti-service-files/swagger/**
 
 logging:
