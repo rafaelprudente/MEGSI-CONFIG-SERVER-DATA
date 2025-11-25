@@ -64,5 +64,5 @@ jwt:
   expiration: 3600000
 
 app:
-  root_folder: /NAS
+  root_folder: /mnt/NAS
   allowed_MimeTypes: '.txt,.pdf'
