@@ -29,18 +29,18 @@
           starttls:
             enable: true
 
-hibernate:
-  dialect: org.hibernate.dialect.MariaDBDialect
+  hibernate:
+    dialect: org.hibernate.dialect.MariaDBDialect
 
-logging:
-  level:
-    root: ${ROOT_LOG_LEVEL:INFO}
-    pt.uminho: ${APP_LOG_LEVEL:DEBUG}
+  logging:
+    level:
+      root: ${ROOT_LOG_LEVEL:INFO}
+      pt.uminho: ${APP_LOG_LEVEL:DEBUG}
 
-app:
-  jwt_expiration: 3600
-  jwt_private_key: classpath:private.pem
-  jwt_public_key: classpath:public.pem
-  kafka_registration_topic: REGISTRATION.MESSAGE.1
-  kafka_registration_groupId: REGISTRATION.MESSAGE.GROUP.ID
-  api_host: localhost:8080
+  app:
+    jwt_expiration: 3600
+    jwt_private_key: classpath:private.pem
+    jwt_public_key: classpath:public.pem
+    kafka_registration_topic: REGISTRATION.MESSAGE.1
+    kafka_registration_groupId: REGISTRATION.MESSAGE.GROUP.ID
+    api_host: localhost:8080
