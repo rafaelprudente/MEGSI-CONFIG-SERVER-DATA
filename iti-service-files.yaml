@@ -7,7 +7,7 @@ spring:
       mode: always
 
   datasource:
-    url: jdbc:mariadb://${MARIADB_SERVER_URI}:3306/ITI
+    url: jdbc:mariadb://${MARIADB_SERVER_URI}:30306/ITI
     username: root
     password: uminho
     driver-class-name: org.mariadb.jdbc.Driver
