@@ -1,3 +1,4 @@
+spring:
   datasource:
     url: jdbc:mariadb://${MARIADB_SERVER_URI}:3306/MEGSI
     username: root
