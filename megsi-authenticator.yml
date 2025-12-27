@@ -17,7 +17,7 @@ spring:
     open-in-view: false
 
   kafka:
-    bootstrap-servers: ${KAFKA_SERVER_URI}:9092
+    bootstrap-servers: ${KAFKA_SERVER_URI:localhost:9092}
     template:
       default-topic: REGISTRATION.MESSAGE.1
 

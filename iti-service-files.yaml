@@ -7,7 +7,7 @@ spring:
       mode: always
 
   datasource:
-    url: jdbc:mariadb://${MARIADB_SERVER_URI}:30306/ITI
+    url: jdbc:mariadb://${MARIADB_SERVER_URI}:3306/ITI
     username: root
     password: uminho
     driver-class-name: org.mariadb.jdbc.Driver
@@ -48,12 +48,6 @@ management:
     health:
       show-details: always
 
-logging:
-  level:
-    root: INFO
-    pt: DEBUG
-#    pt: ${LOG_LEVEL:INFO}
-
 request:
   matchers:
     to:
@@ -63,6 +57,14 @@ jwt:
   secret: thisIsMysecregtfrdesww233eggtffeeddgkjjhhtdhttebd54ndhdhfhhhshs8877465sbbdd
   expiration: 3600000
 
+logging:
+  level:
+    root: ${ROOT_LOG_LEVEL:INFO}
+    pt.uminho: ${APP_LOG_LEVEL:DEBUG}
+
 app:
+  jwt_expiration: 3600
+  jwt_private_key: classpath:private.pem
+  jwt_public_key: classpath:public.pem
   root_folder: /mnt/NAS
   allowed_MimeTypes: '.txt,.pdf'
